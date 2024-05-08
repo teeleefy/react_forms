@@ -1,16 +1,20 @@
 import { useState } from 'react'
-import reactLogo from '../assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import Box from './Box.jsx'
+import BoxList from './BoxList.jsx'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
-    <>
-      <h1>I'm going to be a box form app</h1>
-    </>
+    <div className="App">
+      <h1>Let's add some boxes!</h1>
+      
+      <BoxList/>
+    </div>
   )
 }
 
 export default App
+// height="50px" width="100px" color="magenta" 
