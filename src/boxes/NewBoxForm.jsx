@@ -1,21 +1,66 @@
 import './NewBoxForm.css'
+import { useState } from 'react'
 
-function NewBoxForm(props){
+function NewBoxForm({ addBox }){
+const INITIAL_STATE = { color: "", height: "", width: "" };
+  const [formData, setFormData] = useState(INITIAL_STATE);
+
+  /** Send { color, height, width } to parent
+   *    & clear form. */
+
+  const handleSubmit = evt => {
+    evt.preventDefault();
+    addBox(formData);
+    setFormData(INITIAL_STATE);
+  };
+
+  /** Update local state w/curr state of input elem */
+
+  const handleChange = evt => {
+    const { name, value }= evt.target;
+    setFormData(fData => ({
+      ...fData,
+      [name]: value
+    }));
+  };
+
     return(
         <>
-        <h2>My form will go here</h2>
-        <form>
+        <form className="NewBoxForm" onSubmit={handleSubmit}>
             <div>
-                <label for="color">Box Color: </label>
-                <input name="color" type='text'></input>
+                <label htmlFor="color">Box Color: </label>
+                <input 
+                    className='NewBoxForm-input' 
+                    id="color" 
+                    name="color" 
+                    type='text' 
+                    value={formData.color} 
+                    onChange={ handleChange }>
+                </input>
             </div>
             <div>
-                <label for="height">Box Height: </label>
-                <input name="height" type='text'></input>
+                <label htmlFor="height">Box Height: </label>
+                <input 
+                className='NewBoxForm-input' 
+                id="height" 
+                name="height" 
+                type='text' 
+                value={formData.height} 
+                onChange={ handleChange }
+                ></input>
+
             </div>
             <div>
-                <label for="width">Box Width: </label>
-                <input name="width" type='text'></input>
+                <label htmlFor="width">Box Width: </label>
+                    <input 
+                    className='NewBoxForm-input' 
+                    id="width" 
+                    name="width" 
+                    type='text'
+                    value={formData.width} 
+                    onChange={ handleChange }
+                    ></input>
+                    
             </div>
             <button className="NewBoxForm-btn" type='submit'>Add Box</button>
         </form>

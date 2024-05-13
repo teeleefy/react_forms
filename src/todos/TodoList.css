@@ -1,0 +1,15 @@
+.TodoList-container {
+    
+    height: 35vh;
+    width: 35vw;
+}
+
+.TodoList-header {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.TodoList-list {
+    margin-top: 2rem;
+    padding-top: 2rem;
+}

@@ -1,0 +1,24 @@
+
+.App{
+ 
+ width: 95vw;
+ min-width: 750px;
+  margin: 0 auto;
+}
+
+.App-container{
+  display: inline-block;
+  width: 45vw;
+  height: 60vh;
+  vertical-align: top;
+  margin: 2rem;
+}
+
+#todo {
+  position: fixed;
+  right: 0;
+}
+
+/* #box {
+
+} */

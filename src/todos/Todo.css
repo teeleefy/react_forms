@@ -1,0 +1,11 @@
+.Todo-container{
+    width:fit-content;
+    display: inline-block;
+    margin: 5px; 
+}
+
+.Todo-btn {
+    margin: 2px;
+    padding: 2px;
+    background-color: red;
+}

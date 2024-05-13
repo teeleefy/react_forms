@@ -1,3 +1,17 @@
+.NewBoxFrom {
+    margin: 2rem;
+    padding: 2rem;
+}
+
 .NewBoxForm-btn {
     background-color: rgb(84, 246, 84);
+    height: 3rem;
+    width: 8rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+
+input{
+    margin: 0.5rem;
 }
